@@ -1,0 +1,54 @@
+body {  
+    display: block;
+}
+.section_background {    
+    background-image:url("maxres.jpg");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
+    -waebkit-filter: blur(5px);
+    filtaer: blur(5px);
+    height: 97vh;
+}
+.main_area{
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99998;
+    opacity: 0;
+    cursor: wait;
+}
+
+.container {
+    box-sizing: border-box;
+    font-family: 'Bree Serif',serif;
+    width: 360px;
+    position: fixed;
+    padding: 20px 20px 30px 20px;
+    background: #fff;
+    z-index: 99999;
+    opacity: 0;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 0 0 5px #000;
+    font-weight: 400;
+}
+
+.green {
+    color: green;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+.red {
+    color:red;
+    font-weight: bold;
+    font-size: xx-large;
+}
