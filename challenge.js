@@ -33,7 +33,9 @@ $(document).ready (function(){
         var age = now.getFullYear() - userYear;
 
         if (age >= 18 ){
-            $('.errors').attr('href', 'https://www.w3schools.com/jquery/');
+            setTimeout(function () {
+                window.location = 'https://www.w3schools.com/jquery/';
+            }, 2000);
             $('.errors').trigger('click');
             $('.errors').text('Success!');
             $('.errors').addClass("green");
