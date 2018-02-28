@@ -21,13 +21,13 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(3, 3, 3, 0.8);
+    backgrounad: rgba(3, 3, 3, 0.8);
     z-index: 99998;
     cursor: wait;
 }
 
 .container {
-    margin-top: 200px;
+    margin-top: 10px;
     box-sizing: border-box;
     font-family: 'Bree Serif',serif;
     width: 360px;
@@ -39,7 +39,7 @@ body {
     border-radius: 4px;
     box-shadow: 0 0 5px #000;
     font-weight: 400;
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
 .day  {
@@ -59,8 +59,10 @@ body {
 
 .red {
     color:red;
-    font-weight: bold;
-    font-size: xx-large;
+    box-sizing: border-box;
+    margin: 0 0 20px 0;
+    font-size: 24px;
+    line-height: 20px;
 }
 
 .container h2 {

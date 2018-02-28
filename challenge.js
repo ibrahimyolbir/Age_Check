@@ -33,12 +33,15 @@ $(document).ready (function(){
         var age = now.getFullYear() - userYear;
 
         if (age >= 18 ){
+            $('.errors').attr('href', 'https://www.w3schools.com/jquery/');
+            $('.errors').trigger('click');
             $('.errors').text('Success!');
             $('.errors').addClass("green");
         } else {
-            $('.errors').text('Sorry ! You are still a Kid :(');
+            $('.errors').text('We are Sorry! You must be 18 years of age or older to enter this site.');
             $('.errors').addClass("red");
         } 
             $('.main_container').hide();
         });
 });
+ 
