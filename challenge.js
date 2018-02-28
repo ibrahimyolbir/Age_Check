@@ -38,7 +38,7 @@ $(document).ready (function(){
         } else {
             $('.errors').text('Sorry ! You are still a Kid :(');
             $('.errors').addClass("red");
-        }
+        } 
             $('.main_container').hide();
         });
 });
