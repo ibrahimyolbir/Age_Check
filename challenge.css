@@ -8,8 +8,8 @@ body {
     background-size: cover;
     position: relative;
     background-attachment: fixed;
-    -webakit-filter: blur(5px);
-    filater: blur(5px);
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
     height: 97vh;
 }
 .main_area{
@@ -21,7 +21,6 @@ body {
     right: 0;
     bottom: 0;
     left: 0;
-    backgrounad: rgba(3, 3, 3, 0.8);
     z-index: 99998;
     cursor: wait;
 }
@@ -30,7 +29,7 @@ body {
     margin-top: 10px;
     box-sizing: border-box;
     font-family: 'Bree Serif',serif;
-    width: 360px;
+    width: 342px;
     position: fixed;
     padding: 20px 20px 30px 20px;
     background: rgb(10, 10, 10);
@@ -38,7 +37,7 @@ body {
     text-align: center;
     border-radius: 4px;
     box-shadow: 0 0 5px #000;
-    font-weight: 400;
+    font-weight: 700;
     opacity: 0.8;
 }
 
@@ -72,7 +71,7 @@ body {
     margin:0 0 14px 0;
     font-size:26px;
     border-bottom:1px dashed rgb(161, 45, 45);
-    padding-bottom:11px;
+    padding-bottom:21px;
     color: antiquewhite
 }
 .container h3 {

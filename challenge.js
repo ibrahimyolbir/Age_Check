@@ -1,3 +1,16 @@
+function calculateAge (userDay,userMonth,userYear,nowDate) {
+    var age = nowDate.getFullYear() - userYear;
+    var ay = nowDate.getMonth(); 
+    var gun = nowDate.getUTCDate();
+    if(userMonth > nowDate.getMonth()) {
+        age--;
+    }
+    else if (userMonth == nowDate.getMonth() && userDay > nowDate.getUTCDate()) {
+        age--;
+    }
+        return age;
+}
+
 $(document).ready (function(){
     $('.submit_date').click(function (){
 
@@ -7,36 +20,40 @@ $(document).ready (function(){
       var day = parseInt($('.day').val());
 
       if(monthIndex == 0 || monthIndex == 2 || monthIndex == 4
-        || monthIndex == 6 ||monthIndex == 7 || monthIndex == 10
-        || monthIndex == 10 ){
+        || monthIndex == 6 ||monthIndex == 7 || monthIndex == 9
+        || monthIndex == 11 ){
             if(day<1 || day>31){
               $('.errors').text('Day Format should be between 1 - 31');
               $('.errors').addClass("red");
               $('.main_container').hide();
               return;
               }
-        }else if(monthIndex == 3 || monthIndex == 5|| monthIndex == 7
+        }else if(monthIndex == 3 || monthIndex == 5|| monthIndex == 8
           || monthIndex == 9 ){
+            if(day<1 || day>30){
+
             $('.errors').text('Day Format should be between 1 - 30');
             $('.errors').addClass("red");
             $('.main_container').hide();
             return;
+            }
           }else if(monthIndex == 1){
-            $('.errors').text('Day Format should be between 1 - 28');
+            if(day<1 || day>28){
+                $('.errors').text('Day Format should be between 1 - 28');
             $('.errors').addClass("red");
             $('.main_container').hide();
             return;
+            }
           }
 
         var userYear = parseInt($('.year').val());
         var now = new Date ();
-        var age = now.getFullYear() - userYear;
+        var age = calculateAge(day,monthIndex,userYear,now);
 
         if (age >= 18 ){
             setTimeout(function () {
-                window.location = 'https://www.w3schools.com/jquery/';
+/*                window.location = 'https://github.com/ibrahimyolbir/Age_Check'; */
             }, 2000);
-            $('.errors').trigger('click');
             $('.errors').text('Success!');
             $('.errors').addClass("green");
         } else {
