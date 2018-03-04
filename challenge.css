@@ -77,9 +77,8 @@ body {
     justify-content: center;
     width: 50%;
 }
- .container .white {
+ .container p .white {
     color:rgb(255, 255, 255);
-
     margin: 0 0 20px 0;
     font-size: 24px;
     line-height: 20px;

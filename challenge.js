@@ -70,7 +70,7 @@ $(document).ready (function(){
           userYear = parseInt(year);
         } else {
             $('.errors').text('Year is invalid or empty.');
-            $('.main_container').addClass("white");
+            $('.errors').addClass("white");
             return;
             
         }  
