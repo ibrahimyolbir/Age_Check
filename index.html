@@ -5,47 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <link rel="stylesheet" href="challenge.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="challenge.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="challenge.js"></script>
     <title>Age Check</title>
 </head>
 
 <body>
-    <div class="section_background">
+     <div class="section_background">
     </div>
-    <div class="main_area">
-    </div>
-    <div class="container " style="top:140px; left:460px;">
-
-        <div class="errors">
+    <div class="row" >
+        <div class="col-sm-4">
         </div>
-        <div class="main_container">
-            <h2>Welcome!</h2>
-            <p>You must be
-                <strong>18</strong> or over to enter this website. Please enter your date of birth.</p>
+        <div class=" container col-sm-4">
+            <div class="errors">
+            </div>
+            <div class="main_container">
+                <h2>Welcome!</h2>
+                <p>You must be
+                    <strong>18</strong> or over to enter this website. Please enter your date of birth.</p>
 
-            <div class="fields">
-                <select class="month">
-                    <option value="0">January</option>
-                    <option value="1">February</option>
-                    <option value="2">March</option>
-                    <option value="3">April</option>
-                    <option value="4">May</option>
-                    <option value="5">June</option>
-                    <option value="6">July</option>
-                    <option value="7">August</option>
-                    <option value="8">September</option>
-                    <option value="9">October</option>
-                    <option value="10">November</option>
-                    <option value="11">December</option>
-                </select>
-                <input class="day" maxlength="2" placeholder="DD" />
-                <input class="year" maxlength="4" placeholder="YYYY" />
-                <button class="submit_date">Submit</button>
+                <div class="fields">
+                    <select class="month">
+                        <option value="0">January</option>
+                        <option value="1">February</option>
+                        <option value="2">March</option>
+                        <option value="3">April</option>
+                        <option value="4">May</option>
+                        <option value="5">June</option>
+                        <option value="6">July</option>
+                        <option value="7">August</option>
+                        <option value="8">September</option>
+                        <option value="9">October</option>
+                        <option value="10">November</option>
+                        <option value="11">December</option>
+                    </select>
+                    <input class="day" maxlength="2" placeholder="DD" />
+                    <input class="year" maxlength="4" placeholder="YYYY" />
+                    <button class="submit_date">Submit</button>
+                </div>
             </div>
         </div>
+
+        <div class="col-sm-4">
+
+        </div>
+
     </div>
 
 

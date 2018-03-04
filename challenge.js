@@ -10,7 +10,23 @@ function calculateAge (userDay,userMonth,userYear,nowDate) {
     }
         return age;
 }
+//Year range should be from 1920 to (current year=2018)
+function isYearValid(year) {
+    var regex = /^[0-9]+$/;
+    if (!regex.test(year)){
+        return false;
+    }
+    var test = year.length;
+    if (year == "" || year.length != 4) {
+        return false;
+    }  
+    var currentDate = new Date();
+    var intYear = parseInt(year);
+    if (intYear < currentDate.getFullYear() && intYear >= 1920 ) {
+        return true;
+    } 
 
+}
 $(document).ready (function(){
     $('.submit_date').click(function (){
 
@@ -18,6 +34,7 @@ $(document).ready (function(){
       //Added with the EDIT
       var monthIndex = parseInt($selectedMonth.val());
       var day = parseInt($('.day').val());
+      
 
       if(monthIndex == 0 || monthIndex == 2 || monthIndex == 4
         || monthIndex == 6 ||monthIndex == 7 || monthIndex == 9
@@ -46,7 +63,19 @@ $(document).ready (function(){
             }
           }
 
-        var userYear = parseInt($('.year').val());
+        var year =  $('.year').val();
+        var userYear;
+
+        if (isYearValid(year) ) {
+          userYear = parseInt(year);
+        } else {
+            $('.errors').text('Year is invalid or empty.');
+            $('.main_container').addClass("white");
+            return;
+            
+        }  
+
+
         var now = new Date ();
         var age = calculateAge(day,monthIndex,userYear,now);
 
@@ -54,11 +83,11 @@ $(document).ready (function(){
             setTimeout(function () {
 /*                window.location = 'https://github.com/ibrahimyolbir/Age_Check'; */
             }, 2000);
-            $('.errors').text('Success!');
+            $('.errors').text('Success! You are now being redirected back to the application..');
             $('.errors').addClass("green");
         } else {
             $('.errors').text('We are Sorry! You must be 18 years of age or older to enter this site.');
-            $('.errors').addClass("red");
+            $('.errors').addClass("green");
         } 
             $('.main_container').hide();
         });

@@ -4,42 +4,41 @@ body {
 }
 .section_background {    
     background-image:url("maxres.jpg");
-    background-position: center;
     background-size: cover;
-    position: relative;
-    background-attachment: fixed;
     -webkit-filter: blur(5px);
     filter: blur(5px);
     height: 97vh;
-}
-.main_area{
-    box-sizing: border-box;
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 99998;
     cursor: wait;
-}
-
-.container {
-    margin-top: 10px;
     box-sizing: border-box;
-    font-family: 'Bree Serif',serif;
-    width: 342px;
+    width: 100%;
+
+}
+.container {
+    margin-top: 90px;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
     position: fixed;
-    padding: 20px 20px 30px 20px;
-    background: rgb(10, 10, 10);
-    z-index: 99999;
-    text-align: center;
+    width: 98vw;
+    height: 55vh;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+}
+.main_container {
+    margin: 0 auto;
+    padding: 2%;
+    font-family: 'Bree Serif',serif;;
+    background: rgb(37, 29, 29);
     border-radius: 4px;
     box-shadow: 0 0 5px #000;
     font-weight: 700;
     opacity: 0.8;
 }
+
 
 .day  {
     width: 50px;
@@ -51,15 +50,36 @@ body {
 .green {
     box-sizing: border-box;
     color:#649D09;
-    margin-bottom:5px;
-    margin-top:15px;
-    font-size:26px;
-    padding: 30px 30px 30px 30px;
+    margin: -15 auto;
+    padding: 2%;
+    font-family: 'Bree Serif',serif;;
+    background: rgb(37, 29, 29);
+    border-radius: 4px;
+    box-shadow: 0 0 5px #000;
+    font-weight: 700;
+    opacity: 0.8;
+    font-size: 30px;
+    width: 50%;
 }
 
 .red {
     color:red;
     box-sizing: border-box;
+    margin: 0 auto;
+    padding: 2%;
+    font-family: 'Bree Serif',serif;;
+    background: rgb(37, 29, 29);
+    border-radius: 4px;
+    box-shadow: 0 0 5px #000;
+    font-weight: 700;
+    opacity: 0.8;
+    font-size: 40px;
+    justify-content: center;
+    width: 50%;
+}
+ .container .white {
+    color:rgb(255, 255, 255);
+
     margin: 0 0 20px 0;
     font-size: 24px;
     line-height: 20px;
@@ -187,13 +207,6 @@ body {
     clear:both;
     margin:10px 0 10px 0;
 }             
-@media (max-width: 500px) {
-    .container {
-        box-sizing: border-box;
-        width:auto;
-        margin-right:20px;
-        margin-left:1px;
-    }
     .container select, 
     .container input.day, 
     .container input.year{
