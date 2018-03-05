@@ -87,7 +87,7 @@ $(document).ready (function(){
             $('.errors').addClass("green");
         } else {
             $('.errors').text('We are Sorry! You must be 18 years of age or older to enter this site.');
-            $('.errors').addClass("green");
+            $('.errors').addClass("red");
         } 
             $('.main_container').hide();
         });
