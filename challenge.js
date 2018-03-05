@@ -69,8 +69,9 @@ $(document).ready (function(){
         if (isYearValid(year) ) {
           userYear = parseInt(year);
         } else {
-            $('.errors').text('Year is invalid or empty.');
-            $('.errors').addClass("white");
+            $('.errors').text('Date is invalid or empty.');
+            $('.errors').addClass("red");
+            $('.main_container').hide();
             return;
             
         }  
